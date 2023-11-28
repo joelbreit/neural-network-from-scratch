@@ -25,6 +25,7 @@ touch src/components/HomeContent.jsx src/context/AppContext.jsx src/pages/HomePa
 
 # Update index.js
 cat >src/index.js <<EOF
+import "bootstrap/dist/css/bootstrap.min.css";
 import "./styles/index.scss";
 
 import { BrowserRouter, Route, Routes } from "react-router-dom";

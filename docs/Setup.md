@@ -17,6 +17,13 @@
         4. reactstrap for bootstrap components
         5. sass for color variable overrides
     3. (Theoretically, the above two commands could be combined, but I have run into reproducable issues when I do that)
+    4. Run `npm install chart.js react-chartjs-2`
+        1. chart.js for charts
+        2. react-chartjs-2 for react integration
+    5. ~~Run `npm install react-force-graph`~~
+        1. ~~react-force-graph for force graphs~~
+     6. Run `npm install vis-network`
+        1. vis-network for network graphs
 4. Run `npm update`
 
 ## Clean Up React's Default Files
@@ -64,6 +71,7 @@ When you have setup the project the structure will look something like this:
 8. Replace index.js with:
 
 ```JavaScript
+import "bootstrap/dist/css/bootstrap.min.css";
 import "./styles/index.scss";
 
 import { BrowserRouter, Route, Routes } from "react-router-dom";
@@ -98,29 +106,6 @@ root.render(
 3. Add an hide/ folder
 4. Commit changes
 5. Publish branch
-
-## Secrets
-
-### Local Repo
-
-1. Add .env to .gitignore
-2. Create a .env file in the root directory
-3. Add API secrets to .env
-4. Use .env variables in code
-5. Double check that .env is in .gitignore
-6. Commit changes
-
-### AWS
-
-1. In Amplify, select the app
-2. In advanced settings, select 'Environment variables'
-3. Add the variables and values
-
-## Global Authentication
-
-1. Create an AuthProvider component
-2. Import it at the top level and wrap the app in it
-3. Use the AuthProvider to pass the authentication state throughout
 
 ## Run Locally
 
